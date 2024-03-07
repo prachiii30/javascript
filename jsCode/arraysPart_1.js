@@ -24,3 +24,18 @@ console.log(arr);
 const ele2=arr.pop(); // removes the last element from array
 console.log(ele2);
 console.log(arr);
+
+const newArr=arr.join(); //Adds all the elements of an array into a string, separated by the specified separator string
+console.log(newArr);
+
+console.log("A",arr);
+
+const myarr=arr.slice(1,3);
+console.log(myarr);
+console.log(arr);
+
+const myarray=arr.splice(1,3); //manupilates the original array
+console.log(myarray);
+console.log(arr);
+
+ 
