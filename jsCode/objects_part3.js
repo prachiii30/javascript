@@ -9,7 +9,7 @@
  console.log(course["name"]); //this becomes tedious we want to use this again and again
 
  //instead we can do this""""" known as destructuring
- const{name}=course;
+ const{name} = course;
  const{instructor :i}=course; //i is the alias name **********imp
  console.log(i);
 
