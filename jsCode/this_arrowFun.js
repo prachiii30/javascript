@@ -27,6 +27,7 @@ function fun2(){
     console.log(this.usern); //giver undefined as the o/p 
 }
 fun2();
+console.log("-------------------")
 
 // -----------------------------------------------
 
