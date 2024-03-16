@@ -1,11 +1,12 @@
-const a=100
-switch(a){
-    case a<10:
-        console.log("less than 10")
-        break;
-    case a>10:
-        console.log("grater than 10")
-        break;
-    default:
-        console.log("default running")
+const Animal = "Giraffe";
+switch (Animal) {
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal is not extinct.");
+    break;
+  case "Dinosaur":
+  default:
+    console.log("This animal is extinct.");
 }
