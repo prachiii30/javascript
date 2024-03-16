@@ -8,3 +8,4 @@
 //  1 Memory creation phase or creation phase - only memory is assigned to variables, identifiers no execution
 //  2 Execution Phase  
 // 2. calls (call stack) 
+console.log(this)
