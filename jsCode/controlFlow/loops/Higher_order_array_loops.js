@@ -47,3 +47,21 @@ for( const i in arre ){
     console.log(i);
     console.log(arre[i])
 }
+
+
+//for each loop
+
+const coding=['ruby','js','cpp','java','python']
+
+coding.forEach( (element)=>{
+    console.log(element)
+})
+
+function printMe(element){
+    console.log(element)
+}
+coding.forEach(printMe)
+
+coding.forEach((element,index,arr)=>{
+    console.log(element,index,arr)
+})
