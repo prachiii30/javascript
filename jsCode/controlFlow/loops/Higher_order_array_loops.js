@@ -65,3 +65,28 @@ coding.forEach(printMe)
 coding.forEach((element,index,arr)=>{
     console.log(element,index,arr)
 })
+
+//for each in obj inside array
+
+const coding1=[
+    {
+        name:"javascript",
+        extension :'js'
+    },
+    {
+        name:"python",
+        extension:'py'
+    }
+]
+
+coding1.forEach( (item)=>{
+    console.log(item)
+    console.log(item.name)
+})
+
+//for each does not return anything
+
+const val=coding.forEach((item)=>{
+    return item;
+})
+console.log(val) //undefined
