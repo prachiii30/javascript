@@ -61,3 +61,8 @@ const books=[
 
 
 ]
+const userBooks=books.filter((bk)=> bk.genere==="Non-Fiction")
+console.log(userBooks)
+console.log('-----------')
+const bp=books.filter((bk)=>bk.edition>2000)
+console.log(bp)
