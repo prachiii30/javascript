@@ -14,6 +14,7 @@ const arr=new Array(1,2,3,4);
 arr.push(-1);  //push() adds new element
 console.log(arr);
 
+
 arr.unshift(0);// add the element in the start
 console.log(arr);
 
