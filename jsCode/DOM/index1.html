@@ -7,10 +7,43 @@
 </head>
 <body style="background: #212121; color: #fff;">
     <div class="parent">
+        <!-- // this is comment -->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
         <div class="day">Thursday</div>
     </div>
+    <script>
+        const parent=document.querySelector(".parent")
+        console.log(parent)
+        console.log(parent.children)  //gives HTML collection
+        console.log(parent.children[1].innerText='hello')
+
+
+        for(let i=0;i<parent.children.length;i++){
+            console.log(parent.children[i].innerText);
+        }
+
+
+        //NodeList
+
+        console.log("Node:" ,parent.childNodes)
+        
+// 0: text enter
+// 1:  div.day
+// 2: text enter
+// 3: div.day
+// 4: text
+// 5:  div.day
+// 6 :  text
+// 7 :  div.day
+// 8: text
+// lengt :  9
+
+
+
+
+
+    </script>
 </body>
 </html>
