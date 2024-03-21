@@ -13,16 +13,39 @@
 <script>
     function addlang(name){
         const li=document.createElement('li')
-        li.innerHTML=`${name}`
-        document.querySelector(".language").appendChild(li)
+        li.innerHTML=`${name}` //traverses the whole code thats why takes more time and unoptimesed
+        document.querySelector(".language").appendChild(li) 
     }
     addlang("java")
 
     //above function more optimised way  below
 
     function optilang(name){
-        
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(`${name}`))// more prefered than innerHTML and hence optimised
+        document.querySelector(".language").appendChild(li)
+
     }
+    optilang("Pyhton")
+
+    //Edit
+    //again not a goood practice to use innerHTML
+    document.querySelector('li:nth-child(1)').innerHTML="GOOGi pooh"
+    //better way
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode("mojo"))
+    document.querySelector('li:nth-child(1)').replaceWith(li)
+
+    //3rd way
+    const l2=document.querySelector('li:nth-child(1)')
+    l2.outerHTML='<li>boom boom</li>'
+
+
+
+
+
+
+
 
 </script>
 </html>
