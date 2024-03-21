@@ -11,6 +11,35 @@
         console.log(div)
         div.className="main"
         div.id=Math.round(Math.random()*10+1)
+        div.setAttribute('title',"title")
+        div.style.backgroundColor='green'
+        div.style.padding='10px'
+        // div.innerHTML="Chai aur code" better way to do this is mention below in next to line
+
+        const node=document.createTextNode("Hello you Learning DOM")
+        div.appendChild(node);
+
+        document.body.appendChild(div)
+
+        div2=document.createElement('div')
+        console.log(div2)
+        div2.className="main2"
+        div2.id="id"
+        div.setAttribute('title',"container")
+        // div 2 creation
+        const node1=document.createTextNode("hello you are in div 2")
+        document.body.appendChild(div2)
+        div2.appendChild(node1)
+        div2.style.color="red"
+        div2.style.backgroundColor="#fff"
+        div2.style.padding="10px"
+
+
+
+
+
+
+
 
 
     </script>
