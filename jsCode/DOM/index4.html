@@ -40,6 +40,21 @@
     const l2=document.querySelector('li:nth-child(1)')
     l2.outerHTML='<li>boom boom</li>'
 
+    //khud se try 
+    //1.add
+    const list=document.createElement('li');
+    list.appendChild(document.createTextNode("java is a object oriented programming lang"));
+    document.querySelector('.language').appendChild(list)
+
+    //2.Edit
+    document.querySelector('li:nth-child(3)').replaceWith(li)
+
+    //remove
+    document.querySelector('li:last-child').remove()
+
+
+
+
 
 
 
