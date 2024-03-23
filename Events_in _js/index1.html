@@ -12,10 +12,30 @@
             <li><img width="200px" id="phototshop"src="https://i.pinimg.com/564x/f8/1a/cf/f81acf06f009c0149b65c78ccc7310ac.jpg" alt="phototshop"></li>
             <li><img width="200px" id="japan"src="https://i.pinimg.com/564x/19/8a/c3/198ac3b8b3e2e56ada26d40e413ce367.jpg" alt=""></li>
             <li><img width="200px" id="river"src="https://i.pinimg.com/564x/cd/53/c8/cd53c85aa80302bd3711c23dc555bcae.jpg" alt=""></li>
-            <li><img width="200px"src="https://i.pinimg.com/564x/51/a7/69/51a769146808fc28bd34f556b0571c7c.jpg" alt="" id="owl"></li>
-            <li><img width="200px"src="https://i.pinimg.com/564x/f1/f8/6c/f1f86c34fe4aad856917264ae8006b52.jpg" alt="" id="prayer"></li>
+            <li><img width="200px" id="owl"src="https://i.pinimg.com/564x/51/a7/69/51a769146808fc28bd34f556b0571c7c.jpg" alt="" ></li>
+            <li><img width="200px" id="prayer"src="https://i.pinimg.com/564x/f1/f8/6c/f1f86c34fe4aad856917264ae8006b52.jpg" alt="" ></li>
             <li><a href="https://google.com" id="google">Google</a></li>
         </ul>
     </div>
+    <script>
+        // not a good approach one should use eventListener, they give not just on click feature but also propagation
+        // document.getElementById('owl').onclick=()=>{
+        //     alert("you just clicked on owl")
+        // }
+
+        //better way
+        document.getElementById('owl').addEventListener("click",()=>{
+            alert("This is owl you clicked on")
+        },false )
+        //we can use attachEvent()
+        //jQuery (framework) .on 
+        //false is bydefault therefore we genreally dont see it getting added by people but some times its required
+        //Events are fired inside the browser window
+        //eventListner("click",(e)=>{}) e is the event objcet 
+        //e.target The target property of the event object is always a reference to the element the event occurred upon
+    </script>
 </body>
 </html>
+<!-- events in java run sequentially but there are some exception -->
+<!--  sometimes we ignore these seqentially by doing async fun-->
+<!-- browser events in one such exception they happen when we do some activity-->
