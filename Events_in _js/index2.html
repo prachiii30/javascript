@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color:#414141 ;">
+    <h2>Amazing Images</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="phototshop"src="https://i.pinimg.com/564x/f8/1a/cf/f81acf06f009c0149b65c78ccc7310ac.jpg" alt="phototshop"></li>
+            <li><img width="200px" id="japan"src="https://i.pinimg.com/564x/19/8a/c3/198ac3b8b3e2e56ada26d40e413ce367.jpg" alt=""></li>
+            <li><img width="200px" id="river"src="https://i.pinimg.com/564x/cd/53/c8/cd53c85aa80302bd3711c23dc555bcae.jpg" alt=""></li>
+            <li><img width="200px" id="owl"src="https://i.pinimg.com/564x/51/a7/69/51a769146808fc28bd34f556b0571c7c.jpg" alt="" ></li>
+            <li><img width="200px" id="prayer"src="https://i.pinimg.com/564x/f1/f8/6c/f1f86c34fe4aad856917264ae8006b52.jpg" alt="" ></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('images').addEventListener('click',(e)=>{
+            // console.log(e.target.parentNode)
+            // let remove=e.target.parentNode.remove();  //1st way problem is if we click on li instead of img the whole list gets remove
+            
+            // let remove=e.target.parentNode;
+            // console.log(remove.parentNode)
+            // remove.parentNode.removeChild(remove)
+
+            //to prvent the problm in the 1st way adding some strict check
+            let remove=e.target.tagName
+            if(remove==='IMG'){
+                e.target.parentNode.remove()
+            }
+            else
+            console.log("click on img to make it disaapear")
+
+        },false)
+    </script>
+</body>
+</html>

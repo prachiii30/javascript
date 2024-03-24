@@ -19,20 +19,51 @@
     </div>
     <script>
         // not a good approach one should use eventListener, they give not just on click feature but also propagation
-        // document.getElementById('owl').onclick=()=>{
+        // document.getElementById('owl').onclick=()=>{   scalable in react
         //     alert("you just clicked on owl")
         // }
 
         //better way
         document.getElementById('owl').addEventListener("click",()=>{
-            alert("This is owl you clicked on")
+            // alert("This is owl you clicked on")
         },false )
+        //useCapture: An optional boolean value. If true, the event handler is executed in the capturing phase.
+        // If false or omitted, the event handler is executed in the bubbling phase. By default, this parameter is false.
+        //Event propagation in the DOM (Document Object Model) happens in two phases: capturing and bubbling.
+        // When an event is triggered on an element, it first goes through the capturing phase from the root of the DOM tree down to the target element.
+        // Then, it enters the bubbling phase, where it travels back up the DOM tree from the target element to the root.
+        // The useCapture parameter allows you to specify whether the event handler should be executed during the capturing phase (true) or the bubbling phase (false or omitted, which is the default behavior).
+
+        //for understanding- event propagation is abt bubbling. bubble goes frm bottom to top
+        //capturing goes from top to bottom 
+        //owl is inside the ul. when false first owl clicked gets printed then the ul one(bottom to top)
+        //when both treu. first ul then owl (top to bottom)
+        document.getElementById('images').addEventListener('click',(e)=>{
+            console.log('you clicked inside the ul')
+        },false)
+
+        document.getElementById('owl').addEventListener('click',(e)=>{
+            console.log('owl clicked')
+            e.stopPropagation()  //stops it there does not go up.. only shows owl clicked
+        },false)
+
+        document.getElementById('google').addEventListener('click',(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("link clicked")
+            
+        })
+
         //we can use attachEvent()
         //jQuery (framework) .on 
-        //false is bydefault therefore we genreally dont see it getting added by people but some times its required
+      
         //Events are fired inside the browser window
         //eventListner("click",(e)=>{}) e is the event objcet 
         //e.target The target property of the event object is always a reference to the element the event occurred upon
+
+        //some important event objects are-
+        // type , timestamp , defaultPrevented , target , srcElement, toElement , currentElement , clientX, clientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keyCode
     </script>
 </body>
 </html>
