@@ -17,8 +17,13 @@
     const changeText=function(){
     document.querySelector("h1").innerHTML="Async Javascript"}
 
-    setTimeout(changeText,5000)
+    const ST=setTimeout(changeText,5000)
 
+    //now we want that if i click on stop button bfr 5000ms so the chnage of text gets stop
+        document.querySelector("#stop").addEventListener("click",function(){
+            clearTimeout(ST)
+            console.log("Stopped from changing")
+        })
     // setInterval(()=>{
     //     console.log("hello")
     // },3000)
