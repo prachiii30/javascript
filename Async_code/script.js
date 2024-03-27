@@ -10,5 +10,24 @@ const random_color=function (){
     }
     return color;
 };
-console.log(random_color)
+console.log(random_color())
+let stop;
+const changeColor=function(){
+    if(!stop){
+    stop=setInterval(change,1000)
+    }
+
+    function change(){
+    document.body.style.backgroundColor=random_color()}
+}
+
+const stop_change=function(){
+    clearInterval(stop)
+    stop=null //just stopping from overwriting
+}
+
+
+document.querySelector("#start").addEventListener("click",changeColor)
+document.querySelector("#stop").addEventListener("click",stop_change)
+
 
